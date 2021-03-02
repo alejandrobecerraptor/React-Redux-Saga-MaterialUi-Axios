@@ -4,17 +4,20 @@ import { Container } from '@material-ui/core';
 import queryString from 'query-string';
 
 import { searchMovie } from '../../redux/actions/search';
+import { movieResults, isSearchLoading } from '../../redux/selectors';
 
 export default ({location}) => {
 
     const dispatch = useDispatch();
-    const movies = useSelector(state =>{
-        console.log(state);
-    })
+    const movies = useSelector(state => movieResults(state));
+     console.log(movies);
 
     useEffect(() => {
         const { movieName } = queryString.parse(location.search);
-        dispatch(searchMovie({movieName}));
+
+        if(movieName && !movies){
+            dispatch(searchMovie({movieName}));
+        }
     });
 
 

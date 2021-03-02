@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 
 import Home from './pages/Home';
 import Results from './pages/Results';
+import MovieDetail from './pages/MovieDetail';
 
 const App = ({ store }) => (
 	<Provider store={store}>
@@ -12,6 +13,7 @@ const App = ({ store }) => (
 			<div>
 				<Route exact path="/" component={Home} />
 				<Route path="/results" component={Results} />
+				<Route path="/movie/:id" component={MovieDetail} />
 			</div>
 		</Router>
 	</Provider>

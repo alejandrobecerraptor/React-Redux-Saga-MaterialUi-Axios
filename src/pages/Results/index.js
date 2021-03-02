@@ -12,7 +12,6 @@ export default ({location}) => {
     const dispatch = useDispatch();
     const movies = useSelector(state => movieResults(state));
     const isLoading = useSelector(state => isSearchLoading(state));
-     console.log(movies);
 
     useEffect(() => {
         const { movieName } = queryString.parse(location.search);

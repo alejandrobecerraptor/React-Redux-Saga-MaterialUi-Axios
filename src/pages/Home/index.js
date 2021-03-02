@@ -33,6 +33,9 @@ export default ({history}) => {
 					</Grid>
 						<label><MovieIcon className={classes.MovieIcon}/></label>
 					<Grid>
+					<Typography>
+							Dale animate a buscar el nombre de una Pelicula o Serie!
+						</Typography>
 						
 					</Grid>
 				</Grid>

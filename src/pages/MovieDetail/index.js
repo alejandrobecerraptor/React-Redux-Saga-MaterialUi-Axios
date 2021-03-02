@@ -8,10 +8,11 @@ import {searchMovieById} from '../../redux/actions/search';
 export default ({ match }) => {
     const dispatch = useDispatch();
     const movieResult = useSelector(state => movieResultSelector(state));
-    useEffect(() => {
 
-        if(!movieResult){
-            const movieId = match.params.id;
+    useEffect(() => {
+        const movieId = match.params.id;
+
+        if(!movieResult || movieResult && movieResult.imdbID !== movieId){
             dispatch(searchMovieById({ movieId }));
         }
         

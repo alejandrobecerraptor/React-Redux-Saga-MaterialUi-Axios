@@ -6,20 +6,14 @@ const initialState = {};
 export default function(state = initialState, action){
     switch (action.type) {
         case SEARCH_MOVIE_START:
-            {
-                // console.log('entro aqui');
-                return {...state};
+            return {...state, isLoading: true};
             break;
-            }
-
         case SEARCH_MOVIE_ERROR:
-            // console.log(action);
-            return {...state};
+            return {...state, isLoading: false, movies: null};
             break;
 
         case SEARCH_MOVIE_COMPLETE:
-            // console.log(action);
-            return {...state};
+            return {...state, isLoading: false, movieResults: action.results.data};
             break;
     
         default:

@@ -34,5 +34,8 @@ export default makeStyles({
     },
     buttonsContainer: {
         marginTop: '.5rem'
+    },
+    MovieIcon: {
+        fontSize: '4rem'
     }
 });

@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { Container, Typography, Card, Grid , TextField, Button } from '@material-ui/core';
 
+import {MovieIcon} from '../../icons';
 import styles from './Style';
 
 export default () => {
@@ -26,10 +27,10 @@ export default () => {
 				<Grid container className={classes.titleGridContainer}>
 					<Grid>
 						<Typography className={classes.title}>
-							Bievenido !
+							Bievenid@! 
 						</Typography>
 					</Grid>
-						<label>Icono</label>
+						<label><MovieIcon className={classes.MovieIcon}/></label>
 					<Grid>
 						
 					</Grid>

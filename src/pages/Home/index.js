@@ -4,7 +4,7 @@ import { Container, Typography, Card, Grid , TextField, Button } from '@material
 import {MovieIcon} from '../../icons';
 import styles from './Style';
 
-export default () => {
+export default ({history}) => {
 
 	const [searchText , setSearchText] = useState ('');
 
@@ -15,11 +15,11 @@ export default () => {
 	};
 
 	const handleCleanTextClick = event =>{
-		console.log(10);
+		setSearchText('');
 	};
 
 	const handleSearchTextClick = event =>{
-		console.log(20);
+		history.push(`/results?movieName=${searchText}`)
 	};
 	return (
 		<Container className={classes.container}>

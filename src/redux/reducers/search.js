@@ -3,17 +3,22 @@ import {SEARCH_MOVIE_START, SEARCH_MOVIE_ERROR, SEARCH_MOVIE_COMPLETE} from '../
 
 const initialState = {};
 
-export default function(state = initialState, actions){
-    switch (actions.type) {
+export default function(state = initialState, action){
+    switch (action.type) {
         case SEARCH_MOVIE_START:
+            {
+                // console.log('entro aqui');
+                return {...state};
+            break;
+            }
+
+        case SEARCH_MOVIE_ERROR:
+            // console.log(action);
             return {...state};
             break;
 
-        case SEARCH_MOVIE_START:
-            return {...state};
-            break;
-
-        case SEARCH_MOVIE_START:
+        case SEARCH_MOVIE_COMPLETE:
+            // console.log(action);
             return {...state};
             break;
     

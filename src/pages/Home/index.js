@@ -19,8 +19,9 @@ export default ({history}) => {
 	};
 
 	const handleSearchTextClick = event =>{
-		history.push(`/results?movieName=${searchText}`)
+		history.push(`/results?movieName=${searchText}`);
 	};
+	
 	return (
 		<Container className={classes.container}>
 			<Card className={classes.cardContainer}>

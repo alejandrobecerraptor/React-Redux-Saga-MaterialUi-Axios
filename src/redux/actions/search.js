@@ -1,4 +1,4 @@
-import {SEARCH_MOVIE_START} from '../../consts/actionTypes';
+import {SEARCH_MOVIE_START, SEARCH_MOVIE_BY_ID_START} from '../../consts/actionTypes';
 
 export const searchMovie = payload => {
     return(
@@ -8,3 +8,8 @@ export const searchMovie = payload => {
         }
     )
 }
+
+export const searchMovieById = payload => ({
+    type: SEARCH_MOVIE_BY_ID_START,
+    payload
+});
